@@ -7,8 +7,9 @@ end
 post '/grandma' do
   input = params[:user_input]
   if input == input.upcase
-    redirect to ('/?grandma=I agree, JFK was quite handsome.')
+    @grandma = "I agree, JFK was quite handsome."
   else
-    redirect to ('/?grandma=SPEAK UP HOMIE')
+    @grandma = "SPEAK UP HOMIE"
   end
+  erb :index
 end
