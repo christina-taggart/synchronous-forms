@@ -4,6 +4,11 @@ get '/' do
   erb :index
 end
 
-post '/grandma' do
-  "Implement the /grandma route yourself.<br>Params: <code>#{params.inspect}</code>"
+put '/grandma' do
+  if params[:user_input].upcase == params[:user_input]
+    @grandma = "Hey sonny"
+  else
+    @grandma = "Speak up!"
+  end
+  erb :index
 end
