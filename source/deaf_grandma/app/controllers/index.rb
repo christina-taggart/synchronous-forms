@@ -5,5 +5,6 @@ get '/' do
 end
 
 post '/grandma' do
-  "Implement the /grandma route yourself.<br>Params: <code>#{params.inspect}</code>"
+  @grandma = GrandmaSpeaker.new(params[:user_input]).speak!
+  erb :index
 end
