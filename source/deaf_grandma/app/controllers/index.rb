@@ -5,5 +5,8 @@ get '/' do
 end
 
 post '/grandma' do
-  "Implement the /grandma route yourself.<br>Params: <code>#{params.inspect}</code>"
+  @message = params[:user_input]
+  erb :index
+  #"Implement the /grandma route yourself.<br>Params: <code>#{params.inspect}</code>"
+  #redirect to('/bar')
 end

@@ -4,9 +4,19 @@
     <p>Grandma says: "<span id="grandma_says"><%= @grandma %></span>"</p>
   <% end %>
 
+  <% if @message %>
+    <% if @message != @message.upcase %>
+      <p>Grandma says speak up honey</p>
+    <% else %>
+      <p>Not since 1852</p>
+    <% end %>
+  <% end %>
+
+
+
   <form action="/grandma" method="post">
     Say something to Grandma:
-    <br>
+    <br><br>
     <input type="text" name="user_input">
     <input type="submit" value="Say it!">
   </form>
