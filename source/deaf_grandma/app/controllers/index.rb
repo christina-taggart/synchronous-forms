@@ -1,5 +1,4 @@
 get '/' do
-  p @grandma = params[:grandma]
   if @grandma == @grandma.upcase
     @grandma = "NO, NOT SINCE 1925"
   else
