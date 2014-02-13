@@ -8,3 +8,8 @@ require 'rubygems'
 ENV['RACK_ENV'] ||= 'test'
 
 require File.expand_path("../../config/environment", __FILE__)
+
+
+# Set up capybara
+require 'capybara'
+Capybara.app = Sinatra::Application
