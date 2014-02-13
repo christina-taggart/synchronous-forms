@@ -17,7 +17,12 @@ gem 'rake'
 
 gem 'shotgun'
 
+group :development do
+  gem 'guard-rspec'
+end
+
 group :test do
   gem 'faker'
   gem 'rspec'
+  gem 'simplecov'
 end
